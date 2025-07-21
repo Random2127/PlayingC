@@ -23,12 +23,13 @@ int main(void)
 
     for (int i = 0; i < length; i++)
     {
-        printf("\nInput a number: ");
+        printf("\nInput a number %d: ", i + 1); // added this for clarity of input
         scanf("%d", &numberArray[i]);
         sum += numberArray[i];
     }
 
     printf("Total is: %d\n", sum);
 
+    free(numberArray);
     return 0;
 }
